@@ -83,7 +83,7 @@ const Index = () => {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <span className="font-display text-xl tracking-widest">А <span className="text-accent">&</span> Д</span>
+          <span className="font-display text-xl tracking-widest">М <span className="text-accent">&</span> Е</span>
           <nav className="hidden md:flex gap-8 text-sm tracking-wide">
             {nav.map((n) => (
               <button key={n.id} onClick={() => scrollTo(n.id)} className="hover:text-accent transition-colors">
@@ -107,9 +107,9 @@ const Index = () => {
           <div className="max-w-2xl">
             <p className="animate-reveal text-accent tracking-[0.4em] text-sm uppercase mb-6">Мы женимся</p>
             <h1 className="animate-reveal font-display text-7xl md:text-9xl leading-[0.9]" style={{ animationDelay: '120ms' }}>
-              Анна
+              Максим
               <span className="block text-accent italic">&amp;</span>
-              Дмитрий
+              Екатерина
             </h1>
             <div className="animate-line h-px bg-foreground/30 my-8 max-w-xs" style={{ animationDelay: '500ms' }} />
             <p className="animate-reveal text-lg md:text-xl text-muted-foreground max-w-md" style={{ animationDelay: '600ms' }}>
@@ -332,9 +332,9 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { icon: 'Phone', t: 'Анна', s: '+7 999 123-45-67' },
-              { icon: 'Phone', t: 'Дмитрий', s: '+7 999 765-43-21' },
-              { icon: 'Mail', t: 'Почта', s: 'wedding@anna-dmitry.ru' },
+              { icon: 'Phone', t: 'Максим', s: '+7 999 123-45-67' },
+              { icon: 'Phone', t: 'Екатерина', s: '+7 999 765-43-21' },
+              { icon: 'Mail', t: 'Почта', s: 'wedding@maxim-katya.ru' },
             ].map((c, i) => (
               <Reveal key={c.s} delay={i * 100}>
                 <div className="p-6">
@@ -346,7 +346,7 @@ const Index = () => {
             ))}
           </div>
           <div className="mt-20 pt-10 border-t border-border text-center">
-            <p className="font-display text-3xl tracking-widest">А <span className="text-accent">&</span> Д</p>
+            <p className="font-display text-3xl tracking-widest">М <span className="text-accent">&</span> Е</p>
             <p className="text-muted-foreground text-sm mt-3">15 · 08 · 2026 — С любовью ждём вас</p>
           </div>
         </div>
