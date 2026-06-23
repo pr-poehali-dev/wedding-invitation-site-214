@@ -4,35 +4,35 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 30 20% 96%;
+    --foreground: 20 14% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 30 25% 98%;
+    --card-foreground: 20 14% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 30 25% 98%;
+    --popover-foreground: 20 14% 12%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 20 14% 12%;
+    --primary-foreground: 30 20% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 25 25% 90%;
+    --secondary-foreground: 20 14% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 25 18% 90%;
+    --muted-foreground: 20 8% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 16 50% 52%;
+    --accent-foreground: 30 20% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 25 18% 84%;
+    --input: 25 18% 84%;
+    --ring: 16 50% 52%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -97,5 +97,50 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Golos Text", sans-serif;
+  }
+
+  .font-display {
+    font-family: "Cormorant", serif;
+  }
+}
+
+@layer utilities {
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-reveal {
+    animation: reveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes lineGrow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .animate-line {
+    transform-origin: left;
+    animation: lineGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  @keyframes floatY {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .animate-float {
+    animation: floatY 4s ease-in-out infinite;
   }
 }
