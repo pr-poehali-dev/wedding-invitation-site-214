@@ -6,7 +6,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 
 const HERO_IMG =
-  'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/files/041dad0b-8433-42d8-8283-187f5fecd807.jpg';
+  'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/bucket/bac5e4ac-4081-4d24-9695-df2fe034a555.jpg';
+
+const GALLERY_IMGS = [
+  { src: 'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/bucket/bac5e4ac-4081-4d24-9695-df2fe034a555.jpg', cls: 'col-span-2 row-span-2' },
+  { src: 'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/bucket/c8862541-fda7-4d24-a351-91b65608f002.jpg', cls: '' },
+  { src: 'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/bucket/16f89ec4-1cbf-4961-9b50-ed6e93b9b7fa.jpg', cls: '' },
+  { src: 'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/bucket/d041f71b-7d00-444a-850f-3113e33270bc.jpg', cls: 'col-span-2' },
+];
 
 const WEDDING_DATE = new Date('2026-08-07T14:00:00');
 
@@ -222,11 +229,11 @@ const Index = () => {
             </div>
           </Reveal>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[260px]">
-            {['col-span-2 row-span-2', '', '', 'col-span-2', '', ''].map((cls, i) => (
+            {GALLERY_IMGS.map((img, i) => (
               <Reveal key={i} delay={i * 80}>
-                <div className={`group relative overflow-hidden h-full ${cls}`}>
+                <div className={`group relative overflow-hidden h-full ${img.cls}`}>
                   <img
-                    src={HERO_IMG}
+                    src={img.src}
                     alt=""
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                   />
