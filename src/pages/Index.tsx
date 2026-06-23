@@ -11,7 +11,6 @@ const HERO_IMG =
 const WEDDING_DATE = new Date('2026-08-07T14:00:00');
 
 const nav = [
-  { id: 'about', label: 'О событии' },
   { id: 'when', label: 'Дата и место' },
   { id: 'gallery', label: 'Галерея' },
   { id: 'rsvp', label: 'Подтверждение' },
@@ -175,43 +174,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ABOUT */}
-      <section id="about" className="py-28">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-          <Reveal>
-            <div>
-              <p className="text-accent tracking-[0.3em] uppercase text-sm mb-4">О событии</p>
-              <h2 className="font-display text-5xl md:text-6xl mb-8 leading-tight">
-                Наша история начинается с вас
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                Пять лет назад мы встретились случайно, а сегодня готовы сказать друг другу
-                «да». Этот день станет особенным, и мы хотим, чтобы рядом были самые
-                близкие люди.
-              </p>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Будет тёплый вечер, живая музыка, хорошее вино и много искренних эмоций.
-                Приходите праздновать вместе с нами.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={150}>
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { icon: 'Heart', t: '5 лет', s: 'вместе' },
-                { icon: 'Users', t: '80', s: 'гостей' },
-                { icon: 'Sparkles', t: '1', s: 'вечер' },
-              ].map((c) => (
-                <div key={c.s} className="border border-border p-6 text-center bg-card hover:border-accent transition-colors">
-                  <Icon name={c.icon} size={28} className="mx-auto text-accent mb-4" />
-                  <div className="font-display text-3xl">{c.t}</div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wide">{c.s}</div>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+
 
       {/* WHEN & WHERE */}
       <section id="when" className="py-28 bg-secondary">
