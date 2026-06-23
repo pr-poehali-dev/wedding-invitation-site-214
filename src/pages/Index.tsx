@@ -8,7 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/files/041dad0b-8433-42d8-8283-187f5fecd807.jpg';
 
-const WEDDING_DATE = new Date('2026-08-07T16:00:00');
+const WEDDING_DATE = new Date('2026-08-07T14:00:00');
 
 const nav = [
   { id: 'about', label: 'О событии' },
@@ -224,7 +224,7 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 15:30, начало в 16:00.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Чапаева+1' },
+              { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 14:00, начало в 14:30.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Чапаева+1' },
               { icon: 'Sparkles', t: 'Праздничный вечер', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Советская+13' },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 150}>
