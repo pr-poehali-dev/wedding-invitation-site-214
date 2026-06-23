@@ -8,7 +8,7 @@ import { useToast } from '@/hooks/use-toast';
 const HERO_IMG =
   'https://cdn.poehali.dev/projects/820bb95d-41a2-4aa1-9e90-84e9a4ba7133/files/041dad0b-8433-42d8-8283-187f5fecd807.jpg';
 
-const WEDDING_DATE = new Date('2026-08-15T16:00:00');
+const WEDDING_DATE = new Date('2026-08-07T16:00:00');
 
 const nav = [
   { id: 'about', label: 'О событии' },
@@ -113,7 +113,7 @@ const Index = () => {
             </h1>
             <div className="animate-line h-px bg-foreground/30 my-8 max-w-xs" style={{ animationDelay: '500ms' }} />
             <p className="animate-reveal text-lg md:text-xl text-muted-foreground max-w-md" style={{ animationDelay: '600ms' }}>
-              15 августа 2026 · Москва. Приглашаем вас разделить с нами самый важный день нашей жизни.
+              7 августа 2026 · Москва. Приглашаем вас разделить с нами самый важный день нашей жизни.
             </p>
             <div className="animate-reveal mt-10 flex flex-wrap gap-4" style={{ animationDelay: '750ms' }}>
               <Button onClick={() => scrollTo('rsvp')} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-none px-8 h-12">
@@ -205,7 +205,7 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: 'CalendarHeart', t: '15 августа 2026', s: 'Суббота · 16:00', d: 'Сбор гостей в 15:30, начало церемонии ровно в 16:00.' },
+              { icon: 'CalendarHeart', t: '7 августа 2026', s: 'Пятница · 16:00', d: 'Сбор гостей в 15:30, начало церемонии ровно в 16:00.' },
               { icon: 'MapPin', t: 'Усадьба «Времена года»', s: 'Москва, ул. Лесная, 12', d: 'Просторная веранда с видом на сад и зону для танцев.' },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 150}>
@@ -254,7 +254,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <p className="text-accent tracking-[0.3em] uppercase text-sm mb-4">Подтверждение</p>
               <h2 className="font-display text-5xl md:text-6xl mb-4">Будете с нами?</h2>
-              <p className="text-background/60">Пожалуйста, ответьте до 1 августа 2026 года</p>
+              <p className="text-background/60">Пожалуйста, ответьте до 25 июля 2026 года</p>
             </div>
           </Reveal>
           <Reveal delay={150}>
@@ -332,8 +332,8 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
-              { icon: 'Phone', t: 'Максим', s: '+7 999 123-45-67' },
-              { icon: 'Phone', t: 'Екатерина', s: '+7 999 765-43-21' },
+              { icon: 'Phone', t: 'Максим', s: '+7 930 804-28-77' },
+              { icon: 'Phone', t: 'Екатерина', s: '+7 900 527-36-04' },
               { icon: 'Mail', t: 'Почта', s: 'wedding@maxim-katya.ru' },
             ].map((c, i) => (
               <Reveal key={c.s} delay={i * 100}>
@@ -347,7 +347,7 @@ const Index = () => {
           </div>
           <div className="mt-20 pt-10 border-t border-border text-center">
             <p className="font-display text-3xl tracking-widest">М <span className="text-accent">&</span> Е</p>
-            <p className="text-muted-foreground text-sm mt-3">15 · 08 · 2026 — С любовью ждём вас</p>
+            <p className="text-muted-foreground text-sm mt-3">07 · 08 · 2026 — С любовью ждём вас</p>
           </div>
         </div>
       </section>
