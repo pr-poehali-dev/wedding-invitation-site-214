@@ -205,15 +205,24 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 15:30, начало в 16:00.' },
-              { icon: 'Sparkles', t: 'Праздничный вечер', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.' },
+              { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 15:30, начало в 16:00.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Чапаева+1' },
+              { icon: 'Sparkles', t: 'Праздничный вечер', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Советская+13' },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 150}>
-                <div className="bg-card border border-border p-10 h-full">
+                <div className="bg-card border border-border p-10 h-full flex flex-col">
                   <Icon name={c.icon} size={36} className="text-accent mb-6" />
                   <h3 className="font-display text-3xl mb-2">{c.t}</h3>
                   <p className="text-accent font-medium mb-4">{c.s}</p>
-                  <p className="text-muted-foreground leading-relaxed">{c.d}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-6">{c.d}</p>
+                  <a
+                    href={c.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-auto inline-flex items-center gap-2 border border-foreground/20 px-4 h-10 text-sm hover:border-accent hover:text-accent transition-colors w-fit"
+                  >
+                    <Icon name="Navigation" size={16} />
+                    Маршрут
+                  </a>
                 </div>
               </Reveal>
             ))}
