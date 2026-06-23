@@ -61,21 +61,40 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
   );
 }
 
+const RSVP_URL = 'https://functions.poehali.dev/2cb485d3-6590-4f1d-9261-793886b00eb3';
+
 const Index = () => {
   const { toast } = useToast();
   const cd = useCountdown(WEDDING_DATE);
   const [form, setForm] = useState({ name: '', attend: 'yes', guests: '1', wishes: '' });
+  const [loading, setLoading] = useState(false);
 
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
 
-  const submit = (e: React.FormEvent) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Спасибо!',
-      description: 'Ваш ответ принят. Мы будем рады видеть вас на празднике.',
-    });
-    setForm({ name: '', attend: 'yes', guests: '1', wishes: '' });
+    setLoading(true);
+    try {
+      await fetch(RSVP_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      toast({
+        title: 'Спасибо!',
+        description: 'Ваш ответ принят. Мы будем рады видеть вас на празднике.',
+      });
+      setForm({ name: '', attend: 'yes', guests: '1', wishes: '' });
+    } catch {
+      toast({
+        title: 'Ошибка',
+        description: 'Не удалось отправить ответ. Попробуйте ещё раз.',
+        variant: 'destructive',
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -322,8 +341,8 @@ const Index = () => {
                   className="rounded-none bg-background/5 border-background/20 text-background placeholder:text-background/30 min-h-[100px]"
                 />
               </div>
-              <Button type="submit" className="w-full h-14 bg-accent hover:bg-accent/90 text-accent-foreground rounded-none text-base tracking-wide">
-                Отправить ответ
+              <Button type="submit" disabled={loading} className="w-full h-14 bg-accent hover:bg-accent/90 text-accent-foreground rounded-none text-base tracking-wide disabled:opacity-60">
+                {loading ? 'Отправляем...' : 'Отправить ответ'}
               </Button>
             </form>
           </Reveal>
