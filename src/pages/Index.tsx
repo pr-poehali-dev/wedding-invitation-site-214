@@ -113,7 +113,7 @@ const Index = () => {
             </h1>
             <div className="animate-line h-px bg-foreground/30 my-8 max-w-xs" style={{ animationDelay: '500ms' }} />
             <p className="animate-reveal text-lg md:text-xl text-muted-foreground max-w-md" style={{ animationDelay: '600ms' }}>
-              7 августа 2026 · Москва. Приглашаем вас разделить с нами самый важный день нашей жизни.
+              7 августа 2026 · Шахунья. Приглашаем вас разделить с нами самый важный день нашей жизни.
             </p>
             <div className="animate-reveal mt-10 flex flex-wrap gap-4" style={{ animationDelay: '750ms' }}>
               <Button onClick={() => scrollTo('rsvp')} className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-none px-8 h-12">
@@ -205,8 +205,8 @@ const Index = () => {
           </Reveal>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: 'CalendarHeart', t: '7 августа 2026', s: 'Пятница · 16:00', d: 'Сбор гостей в 15:30, начало церемонии ровно в 16:00.' },
-              { icon: 'MapPin', t: 'Усадьба «Времена года»', s: 'Москва, ул. Лесная, 12', d: 'Просторная веранда с видом на сад и зону для танцев.' },
+              { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 15:30, начало в 16:00.' },
+              { icon: 'Sparkles', t: 'Праздничный вечер', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.' },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 150}>
                 <div className="bg-card border border-border p-10 h-full">
