@@ -195,7 +195,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               { icon: 'Heart', t: 'Роспись', s: 'г. Шахунья, ул. Чапаева, д. 1', d: 'Торжественная церемония бракосочетания. Сбор гостей в 14:00, начало в 14:30.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Чапаева+1' },
-              { icon: 'Sparkles', t: 'Праздничный вечер', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Советская+13' },
+              { icon: 'Sparkles', t: 'Кафе «Зодиак»', s: 'г. Шахунья, ул. Советская, д. 13', d: 'Праздничный банкет, живая музыка и танцы. Начало после церемонии.', maps: 'https://yandex.ru/maps/?text=Шахунья+ул.+Советская+13' },
             ].map((c, i) => (
               <Reveal key={c.t} delay={i * 150}>
                 <div className="bg-card border border-border p-10 h-full flex flex-col">
