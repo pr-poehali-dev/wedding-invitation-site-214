@@ -3,7 +3,7 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from urllib.parse import urlparse
+from urllib.parse import urlparse, unquote
 import pg8000.native
 
 TO_EMAIL = "maksim.gusev.2003@bk.ru"
@@ -14,8 +14,8 @@ def get_db():
         host=u.hostname,
         port=u.port or 5432,
         database=u.path.lstrip('/'),
-        user=u.username,
-        password=u.password,
+        user=unquote(u.username),
+        password=unquote(u.password),
     )
 
 def handler(event: dict, context) -> dict:
