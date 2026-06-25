@@ -266,6 +266,7 @@ const Index = () => {
                   placeholder="Иван Иванов"
                   className="rounded-none bg-background/5 border-background/20 text-background placeholder:text-background/30 h-12"
                 />
+                <p className="mt-2 text-xs text-background/40">Если гостей несколько — укажите каждого через запятую: Иван Иванов, Мария Иванова</p>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
