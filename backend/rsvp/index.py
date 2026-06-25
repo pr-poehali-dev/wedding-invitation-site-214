@@ -36,10 +36,12 @@ def handler(event: dict, context) -> dict:
     guests = int(body.get('guests', 1))
     wishes = body.get('wishes', '')
 
+    def esc(s):
+        return str(s).replace("'", "''")
+
     conn = get_db()
     conn.run(
-        "INSERT INTO rsvp_responses (name, attend, guests, wishes) VALUES (:name, :attend, :guests, :wishes)",
-        name=name, attend=attend_raw, guests=guests, wishes=wishes
+        f"INSERT INTO rsvp_responses (name, attend, guests, wishes) VALUES ('{esc(name)}', '{esc(attend_raw)}', {int(guests)}, '{esc(wishes)}')"
     )
     conn.close()
 
