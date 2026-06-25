@@ -258,12 +258,12 @@ const Index = () => {
           <Reveal delay={150}>
             <form onSubmit={submit} className="space-y-6">
               <div>
-                <label className="block text-sm tracking-wide uppercase mb-2 text-background/60">Ваше имя</label>
+                <label className="block text-sm tracking-wide uppercase mb-2 text-background/60">Имя и фамилия гостя <span className="text-accent">*</span></label>
                 <Input
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  placeholder="Иван и Мария Ивановы"
+                  placeholder="Иван Иванов"
                   className="rounded-none bg-background/5 border-background/20 text-background placeholder:text-background/30 h-12"
                 />
               </div>
