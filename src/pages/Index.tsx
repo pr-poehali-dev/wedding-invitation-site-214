@@ -252,7 +252,7 @@ const Index = () => {
             <div className="text-center mb-12">
               <p className="text-accent tracking-[0.3em] uppercase text-sm mb-4">Подтверждение</p>
               <h2 className="font-display text-5xl md:text-6xl mb-4">Будете с нами?</h2>
-              <p className="text-background/60">Пожалуйста, ответьте до 25 июля 2026 года</p>
+              <p className="text-background/60">Пожалуйста, ответьте до 7 июля 2026 года</p>
             </div>
           </Reveal>
           <Reveal delay={150}>
